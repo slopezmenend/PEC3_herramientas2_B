@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;.h1,h1{@apply text-4xl}.btn{@apply inline-block;@apply font-normal;@apply text-center;@apply px-3;@apply py-2;@apply leading-normal;@apply text-base;@apply rounded;@apply cursor-pointer}.btn-primary,.btn-primary:hover{@apply text-white;@apply bg-primary}
