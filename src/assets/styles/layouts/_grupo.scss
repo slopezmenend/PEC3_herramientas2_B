@@ -1,0 +1,54 @@
+.componentes {
+  @apply flex; //display: flex;
+  @apply flex-wrap; //flex-wrap: wrap;
+  @apply w-full; //width: 100%;
+}
+
+.componente {
+  //min-width: 300px;
+  //max-width: 400px;
+  @apply p-4; //padding: 1em;
+  //margin: 1% 0% 1% 2%;
+  @apply mt-4;
+  @apply mr-0;
+  @apply mb-4;
+  @apply ml-8;
+  @apply bg-blue-200; //background-color: #add8e6;
+  @apply border-2;
+  @apply border-solid;
+  @apply border-black;
+  //border: 2px solid #000000;
+  //box-shadow: 3px 3px 12px #0000ff;
+  @apply shadow;
+}
+
+.componente__nombretexto {
+  //font-size: 16px;
+  @apply text-base;
+  //font-weight: bolder;
+  @apply font-extrabold;
+  //text-align: center;
+  @apply text-center;
+}
+
+.componente__foto {
+  //width: 100%;
+  @apply w-full;
+}
+
+.componente__fotoimg {
+  //width: 100%;
+  @apply w-full;
+  //min-width: 30px;
+  //max-width: 400px;
+}
+
+.componente__instrumentostexto {
+  //text-decoration: italic;
+  @apply italic;
+}
+
+.componente__biografia-parrafo {
+  //padding: 1%;
+  @apply p-4;
+}

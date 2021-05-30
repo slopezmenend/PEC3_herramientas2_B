@@ -1,0 +1,37 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+.h1,
+h1 {
+  @apply text-4xl;
+}
+
+/*
+* ============================
+* Buttons
+*=============================
+*/
+
+.btn {
+  @apply inline-block;
+  @apply font-normal;
+  @apply text-center;
+  @apply px-3;
+  @apply py-2;
+  @apply leading-normal;
+  @apply text-base;
+  @apply rounded;
+  @apply cursor-pointer;
+}
+
+.btn-primary {
+  @apply text-white;
+  @apply bg-primary;
+}
+
+.btn-primary:hover {
+  @apply text-white;
+  @apply bg-primary;
+}
+
+@import "tailwindcss/utilities";

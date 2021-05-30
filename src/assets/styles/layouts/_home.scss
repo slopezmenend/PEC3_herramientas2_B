@@ -1,21 +1,166 @@
-body {
-  margin: 0;
-  padding: 30px;
-  font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+/**
+  * Componentes Tailwind
+  */
+
+//NAVBAR
+.navbar {
+  //navbar
+  @apply relative;
+  @apply flex;
+  @apply flex-wrap;
+  @apply items-center;
+  @apply justify-between;
+  @apply py-1;
+  @apply px-4;
+  //navbar-expand-lg
+  //sticky-top
+  //navbar-dark
+  //@apply text-gray-100;
+  //bg-dark
+  @apply bg-gray-900;
+  //navbar-toggleable-sm
 }
 
-.uoc-logo {
-  display: block;
-  margin-bottom: 20px;
-  width: 300px;
-  height: auto;
+.navbar-brand {
+  @apply inline-block;
+  @apply py-1;
+  @apply mr-4;
+  @apply text-xl;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.navbar-toggler {
+  @apply inline-block;
+  @apply py-1;
+  @apply px-3;
+  @apply leading-none;
+  @apply bg-transparent;
+  @apply border;
+  @apply border-transparent;
+  @apply rounded;
+}
+
+.navbar-toggler-icon {
+  background-image: url("./menu.png");
+}
+
+.navbar-nav {
+  @apply flex;
+  @apply flex-col;
+  @apply pl-0;
+  @apply mb-0;
+  @apply list-none;
+}
+
+.nav-item {
+  //nav-item
+  //btn
+  @apply inline-block;
+  @apply font-normal;
+  @apply text-center;
+  @apply px-3;
+  @apply py-2;
+  @apply leading-normal;
+  @apply text-base;
+  @apply rounded-lg;
+  @apply cursor-pointer;
+  //btn-outline-primary
+  //@apply bg-black;
+  @apply border-2;
+  @apply border-primary;
+  @apply text-gray-700;
+  //btn-margin-left
+  @apply m-1;
+}
+
+.nav-link {
+  @apply block;
+  @apply py-2;
+  @apply px-4;
+}
+
+/**
+  * Resto de scss
+  */
+.header__logo {
+  min-width: 40px;
+  max-width: 100px;
+}
+
+.btn-margin-left {
+  //margin-left: 5px;
+  @apply m-1;
+}
+
+.footer__icono {
+  @apply w-24;
+  @apply min-w-full;
+  //min-width: 30px;
+  //max-width: 60px;
+}
+
+.main {
+  padding: 1%;
+}
+/*.container__fotobanda {
+  //width: 100%;
+  width: calcula_ancho($ancho);
+}*/
+
+.wrapper {
+  width: calcula_ancho(100vh);
+  height: 100vh;
+  border: 2px solid #f08080;
+}
+
+.container__fotobandaimg {
+  width: 90%;
+}
+
+@supports (display: grid) {
+  @media (min-width: 800px) and (max-width: 3000px) {
+    .wrapper {
+      display: grid;
+      //background-image: url("../images/banda.jpg");
+      grid-template-columns: repeat (5, 1fr);
+      grid-gap: 10px;
+      grid-template-rows: repeat (4, auto); //minmax(100px, auto);
+    }
+
+    .container__fotobanda {
+      //display: none;
+      grid-column: 1 / span 5;
+      grid-row: 1 / span 4;
+    }
+
+    .fotobanda {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .bloque__parrafo {
+      grid-column: 3;
+      grid-row: 4;
+      z-index: 2;
+      background-color: #ffa07a;
+      border: 2px solid #f08080;
+
+      p {
+        padding: 5px;
+      }
+    }
+
+    .container__titleimage {
+      grid-column: 1;
+      grid-row: 1;
+      writing-mode: vertical-rl;
+      z-index: 2;
+      color: #a9a9a9;
+      background-color: rgba(255, 255, 255, 1); //#ffa07a;
+      border: 2px solid #f08080;
+    }
+  }
+}
+
+@function calcula_ancho($n) {
+  @return $n - 10;
 }

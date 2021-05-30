@@ -11,7 +11,8 @@
     "build": "npm-run-all clean parcel:build",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
     "just-deploy": "git add . && git commit -m \"VSCode commit\" && git push -v origin main",
-    "deploy": "npm run build just-deploy"
+    "deploy": "npm run build just-deploy",
+    "purgecss": "purgecss --css *.css --content *.html --output ./dist/css"
   },
   "repository": {
     "type": "git",
@@ -27,13 +28,18 @@
   },
   "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
   "devDependencies": {
-    "autoprefixer": "^10.2.3",
+    "autoprefixer": "^10.2.6",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.0.0-nightly.566",
+    "postcss": "^8.3.0",
     "postcss-preset-env": "^6.7.0",
+    "purgecss": "^4.0.3",
     "rimraf": "^3.0.2",
     "sass": "^1.32.5",
-    "sharp": "^0.27.1"
+    "sharp": "^0.27.1",
+    "tailwindcss": "^2.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
 }

@@ -1,8 +1,11 @@
-@use "sass:color";
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+$theme-colors: (
+  "primary": #f08080,
+  // pon el código de color que prefieras,
+  "secundary": #0000ff,
+  "sucess": #add8e6,
+);
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$ancho: 100%;
